@@ -641,7 +641,7 @@ input::-webkit-input-placeholder {
 .about .container .about-intro .content .scrollable-text .inner-text::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background-color:#d3d6d6c5;
+    background: linear-gradient(93.19deg, #1D46F6 5.91%, #971DF6 90.62%);
 }
 
 
@@ -659,7 +659,7 @@ input::-webkit-input-placeholder {
 
 
 .about .container .about-intro .content .scrollable-text .inner-text::-webkit-scrollbar{
-    width: 4px;
+    width: 10px;
     height: 5px;
 }
 
@@ -667,7 +667,7 @@ input::-webkit-input-placeholder {
 .about .container .about-intro .content .scrollable-text .gradient {
     position: absolute;
     bottom: -1px;
-    width: 100%;
+    width: 98%;
     height: 100px;
     background: linear-gradient(180deg, rgba(231, 255, 237, 0) -19.85%, #E7FFED 79.09%);
 }
@@ -964,7 +964,7 @@ input::-webkit-input-placeholder {
 
 .stock-leaders .container .stock-leaders-bottom .lets-go .blue-header {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 46px;
     line-height: 30px;
     text-align: center;
     color: #145485;
@@ -2518,31 +2518,6 @@ details[open] summary .round-button {
     }
 }
 
-@media ( max-width: 690px ) {
-    .growth .container .graph .img-768 {
-        display: none;
-    }
-
-    .growth .container .graph .img-480 {
-        display: block;
-    }
-
-    .growth .container .few-things {
-        width: 420px;
-        height: 585.6px;
-    }
-
-    .growth .container .few-things h3 {
-        width: 360px;
-        text-align: center;
-    }
-
-    .growth .container .few-things .info {
-        flex-direction: column;
-        margin-left: 50px;
-    }
-}
-
 @media ( max-device-width: 540px ) {
     body {
         width: 100%;
@@ -3173,7 +3148,7 @@ details[open] summary .round-button {
     }
 
     .stock-leaders .container .stock-leaders-bottom .lets-go .blue-header {
-        font-size: 35px;
+        font-size: 70px;
     }
 
     .stock-leaders .container .stock-leaders-bottom .lets-go .about-links {
@@ -3533,7 +3508,8 @@ details[open] summary .round-button {
     }
 
     .stock-leaders .container .stock-leaders-bottom .lets-go .blue-header {
-        font-size: 60px;
+        font-size: 85px;
+        line-height: 100px;
     }
 
     .stock-leaders .container .stock-leaders-bottom .lets-go .about-links {
@@ -3547,30 +3523,13 @@ details[open] summary .round-button {
         border-radius: 80px;
     }
 
-    .how-works .container>h2 {
-        font-size: 50px;
-    }
-
-    .how-works .container .start-now-link {
-        height: 150px;
-        width: 550px;
-        margin-bottom: 0;
-        font-size: 40px;
-        border-radius: 80px;
-    }
-    
-    .how-works .container img {
-        height: 440px;
-        width: 880px;
-    }
-
     .faq .container {
         width: 100%;
         height: auto;
     }
 
     .faq .container .faq-header {
-        font-size: 120px;
+        font-size: 85px;
         margin-bottom: 50px;
     }
 
