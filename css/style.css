@@ -676,7 +676,8 @@ input::-webkit-input-placeholder {
     max-width: 585px;
     font-size: 18px;
     line-height: 150%;
-    color: #145485
+    color: #145485;
+    margin-bottom: 100px;
 }
 
 .about .container .about-intro .content .about-conclusion {
@@ -887,6 +888,10 @@ input::-webkit-input-placeholder {
     margin-top: 30px;
 }
 
+.stock-leaders .container .stock-leaders-top .stock-leaders-items .item:nth-child(4) .image img {
+    width: 100px;
+}
+
 .stock-leaders .container .stock-leaders-top .stock-leaders-items .item .header {
     font-weight: 700;
     font-size: 20px;
@@ -944,6 +949,7 @@ input::-webkit-input-placeholder {
     line-height: 150%;
     color: #145485;
     text-align: left;
+    margin: 10px;
 }
 
 .stock-leaders .container .stock-leaders-bottom .lets-go {
@@ -3485,6 +3491,10 @@ details[open] summary .round-button {
 
     .stock-leaders .container .stock-leaders-top .stock-leaders-items .item:nth-child(2) .image img {
         width: 300px;
+    }
+
+    .stock-leaders .container .stock-leaders-top .stock-leaders-items .item:nth-child(4) .image img {
+        width: 250px;
     }
 
     .stock-leaders .container .stock-leaders-top .stock-leaders-items .item .header {
