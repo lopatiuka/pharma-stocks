@@ -303,7 +303,7 @@ input::-webkit-input-placeholder {
     outline: none;
 }
 
-.intro .container .content .form-container form input[type=submit] {
+.intro .container .content .form-container form button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,14 +322,18 @@ input::-webkit-input-placeholder {
     transition-duration: 0.2s;
 }
 
-.intro .container .content .form-container form input[type=submit]:hover{
+.intro .container .content .form-container form button:hover:not([disabled]){
     margin: -5px 0 35px 0;
     cursor: pointer; 
 }
 
-.intro .container .content .form-container form input[type=submit]:active{
+.intro .container .content .form-container form button:active{
     background: linear-gradient(93.19deg, #1339DC 5.91%, #820FDD 90.62%);
 }
+
+/* .signup-form-wrapper .intgrtn-form-signup .intgrtn-btn-submit-holder .intgrtn-btn-submit[disabled], .signup-form-wrapper .intgrtn-form-optin .intgrtn-btn-submit-holder .intgrtn-btn-submit[disabled] {
+    cursor: not-allowed;
+} */
 
 .intro .container .content .form-container form .checkboxes {
     display: flex;
@@ -341,78 +345,121 @@ input::-webkit-input-placeholder {
     margin-top: 35px;
     margin-bottom: 30px;
 }
-  .intro .container .content .form-container form .checkboxes .switch {
+.intgrtn-form-signup .intgrtn-input-holder-email {
+    display: none;
+}
+
+.intgrtn-form-signup .intgrtn-input-holder-last-name {
+    display: none;
+}
+
+.intgrtn-form-signup .intgrtn-input-holder-first-name {
+    display: none;
+}
+
+.intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group {
+    height: 50px;
+    margin-bottom: 0px;
+    max-width: 338px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder {
+    height: 100%;
+    background-color: inherit;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid rgb(20, 84, 133);
+}
+
+.intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area {
+    margin-top: 6px;
+}
+
+.intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area .intgrtn-phone-code {
+    color: rgb(20, 84, 133);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group input {
+    width: 242.9px;
+    margin: 0;
+}
+
+.intro .container .content .form-container form .checkboxes .switch {
     position: relative;
     display: inline-block;
     width: 36px;
-    height: 26px;
+    height: 27px;
     margin-right: 20px;
-  }
-  .intro .container .content .form-container form .checkboxes .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .intro .container .content .form-container form .checkboxes .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #FFFFFF;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    box-shadow: 0px 4px 20px rgba(0, 0, 255, 0.15);
-  }
-  .intro .container .content .form-container form .checkboxes .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 3.5px;
-    background-color: #C4C4C4;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  .intro .container .content .form-container form .checkboxes input:checked + .slider:before {
-    background-color: #1428BF;
-  }
-  .intro .container .content .form-container form .checkboxes input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  .intro .container .content .form-container form .checkboxes input:checked + .slider:before {
-    -webkit-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
-  }
-  .intro .container .content .form-container form .checkboxes .slider.round {
-    border-radius: 34px;
-  }
-  .intro .container .content .form-container form .checkboxes .slider.round:before {
-    border-radius: 50%;
-  }
-  .intro .container .content .form-container form .checkboxes .custom-checkbox {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .intro .container .content .form-container form .checkboxes .custom-checkbox p {
-    font-size: 14px;
-    line-height: 157%;
-    color: #A4B4C0;
-    width: 290px;
-    margin-top: 0;
-  }
-  .intro .container .content .form-container form .checkboxes .custom-checkbox p a {
-    color: rgb(43, 43, 255);
-    text-decoration: none;
-  }
-  .intro .container .content .form-container form .checkboxes .custom-checkbox p a:hover {
-    cursor: pointer;
-  }
+}
+.intro .container .content .form-container form .checkboxes .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.intro .container .content .form-container form .checkboxes .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0px 4px 20px rgba(0, 0, 255, 0.15);
+}
+.intro .container .content .form-container form .checkboxes .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: #C4C4C4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.intro .container .content .form-container form .checkboxes input:checked + .slider:before {
+  background-color: #1428BF;
+}
+.intro .container .content .form-container form .checkboxes input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.intro .container .content .form-container form .checkboxes input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.intro .container .content .form-container form .checkboxes .slider.round {
+  border-radius: 34px;
+}
+.intro .container .content .form-container form .checkboxes .slider.round:before {
+  border-radius: 50%;
+}
+.intro .container .content .form-container form .checkboxes .custom-checkbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.intro .container .content .form-container form .checkboxes .custom-checkbox p {
+  font-size: 14px;
+  line-height: 157%;
+  color: #A4B4C0;
+  width: 290px;
+  margin-top: 0;
+}
+.intro .container .content .form-container form .checkboxes .custom-checkbox p a {
+  color: rgb(43, 43, 255);
+  text-decoration: none;
+}
+.intro .container .content .form-container form .checkboxes .custom-checkbox p a:hover {
+  cursor: pointer;
+}
 
 .intro .ribbon {
     width: 94%;
@@ -1031,20 +1078,16 @@ input::-webkit-input-placeholder {
     margin-bottom: 100px;
 }
 
-.faq .container .answers details {
+.faq .container .answers .details-faq {
     margin-bottom: 20px;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    flex-wrap: wrap;
     width: 1280px;
 }
 
-.faq .container .answers details summary::-webkit-details-marker {
-    display: none
-}
-
-.faq .container .answers details summary {
+.faq .container .answers .details-faq .summary-faq {
     width: 100%;
     height: 55px;
     display: flex;
@@ -1062,7 +1105,7 @@ input::-webkit-input-placeholder {
     color: #145485;
 }
 
-.faq .container .answers details summary .round-button{
+.faq .container .answers .details-faq .summary-faq .round-button{
     width: 34px;
     height: 34px;
     border-radius: 100px;
@@ -1080,15 +1123,19 @@ input::-webkit-input-placeholder {
     transition-duration: 0.2s;
 }
 
-details[open] summary .round-button {
+.round-button-rotated {
     transform: rotate(135deg);
 }
 
-.faq .container .answers details summary:focus {
+.faq .container .answers .details-faq .summary-faq:focus {
     outline: none;
 }
 
-.faq .container .answers details p {
+.faq .container .answers .details-faq .opening {
+    display: none;
+}
+
+.faq .container .answers .details-faq p {
     max-width: 1680px;
     font-size: 18px;
     font-style: normal;
@@ -1375,23 +1422,23 @@ details[open] summary .round-button {
         height: 668.73px;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 2550px;
     }
 
-    .faq .container .answers details summary {
+    .faq .container .answers .details-faq .summary-faq {
         height: 80px;
         font-size: 30px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 30px;
         width: 2550px;
         max-width: 2550px;
         line-height: 35px;
     }
 
-    .faq .container .answers details summary .round-button {
+    .faq .container .answers .details-faq .summary-faq .round-button {
         width: 60px;
         height: 60px;
         font-size: 50px;
@@ -1474,7 +1521,7 @@ details[open] summary .round-button {
         z-index: -1;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 2000px;
     }
 }
@@ -1647,7 +1694,7 @@ details[open] summary .round-button {
         align-items: center;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 1062px;
     }
 
@@ -1714,7 +1761,11 @@ details[open] summary .round-button {
         width: 258.04px;
     }
 
-    .intro .container .content .form-container form input[type = submit]{
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group input {
+        width: 160.9px;
+    }
+
+    .intro .container .content .form-container form button{
         width: 216.96px;
         height: 65.39px;
         font-size: 14px;
@@ -1816,15 +1867,15 @@ details[open] summary .round-button {
         align-items: center;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 828px;
     }
 
-    .faq .container .answers details summary {
+    .faq .container .answers .details-faq .summary-faq {
         font-size: 14px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 14px;
     }
 
@@ -1888,7 +1939,7 @@ details[open] summary .round-button {
     .intro .container .content .form-container form input {
         width: 258.04px;
     }
-    .intro .container .content .form-container form input[type = submit]{
+    .intro .container .content .form-container form button{
         width: 216.96px;
         height: 65.39px;
         font-size: 14px;
@@ -1967,15 +2018,15 @@ details[open] summary .round-button {
         align-items: center;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 828px;
     }
 
-    .faq .container .answers details summary {
+    .faq .container .answers .details-faq .summary-faq {
         font-size: 14px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 14px;
     }
 
@@ -2040,7 +2091,15 @@ details[open] summary .round-button {
         width: 431.81px;
     }
 
-    .intro .container .content .form-container form input[type = submit]{
+    .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group {
+        max-width: 431.81px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group input {
+        width: 336px;
+    }
+
+    .intro .container .content .form-container form button{
         height: 65.39px;
         width: 363.07px;
         margin-bottom: 50px;
@@ -2250,10 +2309,10 @@ details[open] summary .round-button {
         align-items: center;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 799px;
     }
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 14px;
     }
 
@@ -2301,6 +2360,14 @@ details[open] summary .round-button {
         width: 501.5px;
     }
 
+    .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group {
+        max-width: 505px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group input {
+        width: 411px;
+    }
+
     .intro .container .content .form-container form .checkboxes {
         width: 501.5px;
     }
@@ -2340,10 +2407,11 @@ details[open] summary .round-button {
 
     .about .container .about-items .inner-items {
         margin-top: -1486px;
+        margin-left: -68px;
     }
 
     .about .container .about-items .item {
-        width: 648px;
+        width: auto;
         height: auto;
         margin-bottom: 30px;
         flex-direction: row;
@@ -2352,6 +2420,7 @@ details[open] summary .round-button {
 
     .about .container .about-items .item .circle {
         margin: 0;
+        margin-right: 50px;
     }
 
     .about .container .about-items .item:nth-child(2) {
@@ -2359,7 +2428,7 @@ details[open] summary .round-button {
     }
 
     .about .container .about-items .item .inner-item {
-        width: 552px;
+        width: 648px;
         height: auto;
     }
 
@@ -2442,16 +2511,11 @@ details[open] summary .round-button {
         height: auto;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 632px;
-        height: 42.88px;
     }
 
-    .faq .container .answers details[open]{
-        height: auto;
-    }
-
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 14px;
     }
 
@@ -2521,6 +2585,10 @@ details[open] summary .round-button {
 @media ( max-device-width: 700px ) {
     body {
         width: 850px;
+    }
+
+    .about .container .about-items .inner-items {
+        margin-left: 5px;
     }
 }
 
@@ -2608,8 +2676,8 @@ details[open] summary .round-button {
         text-align: center;
     }
 
-    .intro .container .content #form2 {
-        height: auto;
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder{
+        margin-bottom: 50px;
     }
 
     .intro .container .content .form-container {
@@ -2631,7 +2699,24 @@ details[open] summary .round-button {
         height: 70px;
         font-size: 30px;
     }
-    .intro .container .content .form-container form input[type = submit]{
+
+    .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group {
+        max-width: 755px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area {
+        margin-top: -10px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area .intgrtn-phone-code {
+        font-size: 30px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group input {
+        width: 655px;
+    }
+
+    .intro .container .content .form-container form button{
         height: 65.39px;
         width: 463.07px;
         margin-bottom: 50px;
@@ -2651,7 +2736,11 @@ details[open] summary .round-button {
         line-height: 35px;
     }
 
-    .intro .container .content .form-container form input[type = submit] {
+    .intro .container .content .form-container form .checkboxes .custom-checkbox p {
+        width: 700px;
+    }
+
+    .intro .container .content .form-container form button {
         width: 580px;
         height: 100px;
         border-radius: 100px;
@@ -2829,24 +2918,23 @@ details[open] summary .round-button {
         height: auto;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 800px;
-        height: 80px;
         margin-bottom: 30px;
     }
 
-    .faq .container .answers details summary{
+    .faq .container .answers .details-faq .summary-faq{
         height: 80px;
         font-size: 25px;
     }
 
-    .faq .container .answers details summary .round-button {
+    .faq .container .answers .details-faq .summary-faq .round-button {
         width: 60px;
         height: 60px;
         font-size: 50px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 20px;
     }
     
@@ -2969,6 +3057,10 @@ details[open] summary .round-button {
         font-size: 30px;
     }
 
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area {
+        margin-top: -10px;
+    }
+
     .intro .container .content .form-container form .checkboxes {
         width: 682px;
     }
@@ -2990,7 +3082,7 @@ details[open] summary .round-button {
       transform: translateX(24px);
     }
 
-    .intro .container .content .form-container form input[type = submit] {
+    .intro .container .content .form-container form button {
         width: 580px;
         height: 100px;
         border-radius: 100px;
@@ -3187,26 +3279,25 @@ details[open] summary .round-button {
         height: auto;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 800px;
-        height: 80px;
         margin-bottom: 30px;
     }
 
-    .faq .container .answers details summary{
+    .faq .container .answers .details-faq .summary-faq{
         height: 100px;
         font-size: 35px;
         line-height: 37px;
         border-radius: 30px;
     }
 
-    .faq .container .answers details summary .round-button {
+    .faq .container .answers .details-faq .summary-faq .round-button {
         min-width: 60px;
         height: 60px;
         font-size: 50px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 32px;
         line-height: 40px;
     }
@@ -3280,7 +3371,7 @@ details[open] summary .round-button {
         display: flex;
         flex-direction: column;
         width: 310px;
-        align-items: flex-start;
+        align-items: center;
     }
 
     header .exposure .country {
@@ -3290,13 +3381,21 @@ details[open] summary .round-button {
         width: 100%;
     }
 
-    header .exposure .country p {
-        font-size: 18px;
+    header .container .main-content .exposure .country p {
+        font-size: 30px;
+        line-height: 150%;
         margin-left: 10px;
     }
 
-    header .exposure .caption {
-        font-size: 18px;
+    header .container .main-content .exposure .country img {
+        width: 70px;
+        height: 70px;
+        margin-top: 0;
+    }
+
+    header .container .main-content .exposure .caption {
+        font-size: 25px;
+        line-height: 150%;
     }
 
     header .container .main-content img {
@@ -3362,11 +3461,24 @@ details[open] summary .round-button {
         font-size: 50px;
         padding-bottom: 5px;
     }
-    .intro .container .content .form-container form input[type = submit]{
-        height: 100px;
-        width: 463.07px;
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area {
+        margin-top: -37px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder-phone .intgrtn-input-group .intgrtn-area-flags-holder .intgrtn-selected-area .intgrtn-phone-code {
+        font-size: 50px;
+    }
+
+    .intro .container .content .form-container .intgrtn-form-signup .intgrtn-input-holder {
+        margin-bottom: 60px;
+    }
+
+    .intro .container .content .form-container form button{
+        height: 130px;
+        width: 680.07px;
+        border-radius: 75px;
         margin-bottom: 50px;
-        border-radius: 50px;
         font-size: 45px;
     }
 
@@ -3551,20 +3663,19 @@ details[open] summary .round-button {
         height: auto;
     }
 
-    .faq .container .answers details {
+    .faq .container .answers .details-faq {
         width: 800px;
-        height: 130px;
         margin-bottom: 50px;
     }
 
-    .faq .container .answers details summary {
+    .faq .container .answers .details-faq .summary-faq {
         font-size: 29px;
         height: 150px;
         line-height: 65px;
         border-radius: 50px;
     }
 
-    .faq .container .answers details summary .round-button {
+    .faq .container .answers .details-faq .summary-faq .round-button {
         min-width: 70px;
         height: 70px;
         margin: 20px;
@@ -3572,7 +3683,7 @@ details[open] summary .round-button {
         font-size: 40px;
     }
 
-    .faq .container .answers details p {
+    .faq .container .answers .details-faq p {
         font-size: 50px;
         line-height: 60px;
     }
