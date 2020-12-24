@@ -1908,6 +1908,7 @@ input::-webkit-input-placeholder {
     .intro .container .content .video-container {
         width: 657.2px;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .intro .container .content .video-container .video {
@@ -1929,7 +1930,8 @@ input::-webkit-input-placeholder {
     }
 
     .intro .container .content .form-container {
-        width: 313.12px;
+        width: 657.2px;
+        margin: 0 0 50px 0;
     }
 
     .intro .container .content .form-container h2 {
@@ -1937,7 +1939,7 @@ input::-webkit-input-placeholder {
     }
 
     .intro .container .content .form-container form input {
-        width: 258.04px;
+        width: 600px;
     }
     .intro .container .content .form-container form button{
         width: 216.96px;
@@ -1946,7 +1948,15 @@ input::-webkit-input-placeholder {
     }
 
     .intro .container .content .form-container form .checkboxes {
-        width: 258.04px;
+        width: 600px;
+    }
+
+    .intro .container .content .form-container form .checkboxes .switch {
+        width: 38px;
+    }
+
+    .intro .container .content .form-container form .checkboxes .custom-checkbox p {
+        width: 542px;
     }
 
     .about .container .about-header {
@@ -2072,7 +2082,6 @@ input::-webkit-input-placeholder {
     .intro .container .content .video-container {
         width: 800px;
         height: auto;
-        margin-bottom: 100px;
     }
     
     .intro .container .content .video-container .video {
@@ -2338,7 +2347,7 @@ input::-webkit-input-placeholder {
     }
 }
 
-@media ( max-width: 768px ) {
+@media ( max-width: 850px ) {
     header .container {
         width: 670px;
     }
@@ -2349,7 +2358,6 @@ input::-webkit-input-placeholder {
 
     .intro .container .content .video-container {
         width: 649px;
-        margin-bottom: 0;
     }
 
     .intro .container .content .form-container {
@@ -2554,9 +2562,9 @@ input::-webkit-input-placeholder {
     }
 }
 
-@media ( max-width: 690px ) {
+@media ( min-width: 481px ) and ( max-width: 690px  ) {
     .intro .container .content {
-        align-items: flex-start;
+        align-items: center;
     }
     
     .intro .container .content .video-container {
@@ -2564,16 +2572,16 @@ input::-webkit-input-placeholder {
     }
 
     .intro .container .content .video-container .video-header {
-        align-self: flex-start;
+        align-self: center;
     }
 
     .intro .container .content .video-container .video-header h1 {
-        width: 422px;
+        max-width: 100%;
     }
 
     .intro .container .content .video-container p {
-        width: 455px;
-        align-self: flex-start;
+        max-width: 100%;
+        align-self: center;
     }
 
     .intro .container .content .video-container .video {
@@ -3172,14 +3180,14 @@ input::-webkit-input-placeholder {
     }
 
     .intro .container .content .video-container .video-header h1 {
-        font-size: 55px;
+        font-size: 60px;
         line-height: 72px;
         text-align: left;
         margin-left: 0;
     }
 
     .intro .container .content .video-container p {
-        font-size: 34px;
+        font-size: 45px;
         line-height: 56px;
     }
 
@@ -3284,7 +3292,7 @@ input::-webkit-input-placeholder {
 
     .about .container .about-intro .content .scrollable-text .inner-text p {
         max-width: 100%;
-        font-size: 0px;
+        font-size: 45px;
     }
 
     .about .container .about-intro .content .about-conclusion {
